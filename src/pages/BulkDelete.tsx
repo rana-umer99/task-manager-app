@@ -17,7 +17,6 @@ const BulkDelete: React.FC = () => {
 
     return (
         <Container maxWidth="xl" sx={{ mt: '4rem' }}>
-            {/* <TaskListing heading='Delete Tasks' isDeleting /> */}
             <TaskListing isDeleting />
         </Container>
     );

@@ -1,10 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { AppBar, Container, Toolbar, Typography, Box, IconButton, Menu, MenuItem, Button } from '@mui/material';
+import { AppBar, Typography } from '@mui/material';
 
-import TaskIcon from '@mui/icons-material/Task';
-import MenuIcon from '@mui/icons-material/Menu';
 import { FaTrash, FaPen, FaList } from 'react-icons/fa';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
@@ -63,10 +61,6 @@ const Header = () => {
                 </div>
                 </div>
             </nav>
-
-
-
-
         </AppBar>
     )
 }

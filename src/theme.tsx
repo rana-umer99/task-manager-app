@@ -4,7 +4,7 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import { ChildernProp } from './types';
 
 const theme = createTheme({
-    // Add your custom theme options here (e.g., palette, typography, etc.)
+    // custom theme options here (e.g., palette, typography, etc.)
 });
 
 const AppThemeProvider: React.FC<ChildernProp> = ({ children }) => {

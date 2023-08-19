@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography, Checkbox, Box } from '@mui/material';
+import { Checkbox } from '@mui/material';
 
 interface Props {
     label: string;
@@ -26,13 +26,6 @@ const TaskCard: React.FC<Props> = ({ taskId, label, description, imageSrc, isDel
                 <div className="ml-4 flex-grow">
                     <h3 className="text-gray-800 text-lg font-semibold leading-5 overflow-hidden line-clamp-2 max-h-16 mb-1" title={label}>{label}</h3>
                     <p className="text-gray-600 leading-5 overflow-hidden line-clamp-2 max-h-20" title={description}>{description}</p>
-                    {/* <p className="text-sm text-gray-400 mt-2">Time: {task.time}</p> */}
-                    {/* <input 
-                        type="checkbox" 
-                        className="cursor-pointer" 
-                        isChecked={taskId)}
-                        onToggleChecked={() => handleToggleChecked(id)
-                    /> */}
                 </div>
                 {isDeleting && <Checkbox className='absolute top-2 right-2' checked={isChecked} color="primary" />}
             </div>

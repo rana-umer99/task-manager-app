@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Typography, Grid, Button } from '@mui/material';
+import { Button } from '@mui/material';
 import { FaTrash } from 'react-icons/fa';
 import AppContext from '../../context';
 import TaskCard from './TaskCard';
