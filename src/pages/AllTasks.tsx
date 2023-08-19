@@ -15,7 +15,7 @@ const AllTasks = () => {
   }, [allTasks]);
 
   return (
-    <div className="pl-6 pr-6 mx-auto py-8">
+    <div className="container px-4 lg:px-4 mx-auto py-8">
       <h2 className="text-2xl font-semibold mb-4">List of Tasks</h2>
       <TaskListing />
     </div>

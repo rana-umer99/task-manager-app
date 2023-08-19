@@ -34,7 +34,6 @@ const TaskListing: React.FC<Props> = ({ isDeleting = false }) => {
     require("../../assets/img/4.jpg"),
     require("../../assets/img/5.jpg"),
   ];
-  console.log(imageSources);
 
   return (
     <>

@@ -5,18 +5,12 @@ import { AppBar, Typography } from "@mui/material";
 
 import { FaTrash, FaPen, FaList } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
-import styled from "styled-components";
 
 const pages = [
   { label: "Task List", href: "/list-tasks" },
   { label: "Create Task", href: "/create-task" },
   { label: "Bulk Delete", href: "/bulk-delete" },
 ];
-
-const StyledTypography = styled(Typography)`
-  color: inherit;
-  cursor: pointer;
-`;
 
 const Header = () => {
   const navigate = useNavigate();
