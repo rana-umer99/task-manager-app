@@ -1,8 +1,6 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
-import {
-  Task,
-} from '../types';
+import { Task } from "../types";
 
 export type context = {
   allTasks: Task[];
@@ -15,11 +13,11 @@ export type context = {
 
 export const initContext: context = {
   allTasks: [],
-  toastMessage: '',
+  toastMessage: "",
   addTask: () => null,
   deleteTasks: () => null,
   setToast: () => null,
-  handleTaskStatus: () => null
+  handleTaskStatus: () => null,
 };
 
 const AppContext = createContext(initContext);

@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
 export interface ChildernProp {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export interface Task {
-    id: number,
-    label: string,
-    description: string,
-    isCompleted: boolean;
-};
+  id: number;
+  label: string;
+  description: string;
+  isCompleted: boolean;
+}
