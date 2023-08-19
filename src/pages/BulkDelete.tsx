@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import { Container } from "@mui/material";
 import TaskListing from "../components/common/TaskListing";
 import AppContext from "../context";
 import { useNavigate } from "react-router-dom";
@@ -16,9 +15,9 @@ const BulkDelete: React.FC = () => {
   }, [allTasks]);
 
   return (
-    <Container maxWidth="xl" sx={{ mt: "4rem" }}>
+    <div className="container px-4 lg:px-4 mx-auto py-8">
       <TaskListing isDeleting />
-    </Container>
+    </div>
   );
 };
 

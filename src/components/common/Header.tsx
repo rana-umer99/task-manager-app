@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { AppBar, Typography } from "@mui/material";
+import { AppBar } from "@mui/material";
 
 import { FaTrash, FaPen, FaList } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
