@@ -72,10 +72,7 @@ const CreateTask: React.FC = () => {
             value={taskDescription}
             onChange={(e) => setTaskDescription(e.target.value)}
           />
-          <button
-            type="submit"
-            className="btn-blue mx-auto"
-          >
+          <button type="submit" className="btn-blue mx-auto">
             <FaPlus className="text-xs md:text-sm mr-1" />
             <span className="hidden md:inline">Add Task</span>
           </button>
