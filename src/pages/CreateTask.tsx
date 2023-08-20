@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
-import { TextField, Button, Container, Box, Typography } from "@mui/material";
 import AppContext from "../context";
 import { useNavigate } from "react-router-dom";
+import { FaPlus } from "react-icons/fa";
 
 const CreateTask: React.FC = () => {
   const navigate = useNavigate();
@@ -25,64 +25,63 @@ const CreateTask: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="md" sx={{ mt: "4rem" }}>
-      <Typography
-        variant="h2"
-        component="h2"
-        sx={{
-          fontFamily: "monospace",
-          fontSize: "2rem",
-          fontWeight: 700,
-          letterSpacing: ".3rem",
-          mb: 4,
-        }}
-      >
-        Add Task
-      </Typography>
-      <Box
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { mb: 2 },
-        }}
-        autoComplete="off"
-        onSubmit={handleSubmit}
-      >
-        <TextField
-          label="Task Name"
-          variant="outlined"
-          fullWidth
-          required
-          value={taskName}
-          onChange={(e) => setTaskName(e.target.value)}
-          inputProps={{ maxLength: 100 }}
-        />
-        <TextField
-          label="Description"
-          variant="outlined"
-          fullWidth
-          required
-          value={taskDescription}
-          onChange={(e) => setTaskDescription(e.target.value)}
-          inputProps={{ maxLength: 150 }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Button
-            variant="contained"
-            color="primary"
+    // <div className="container flex flex-col justify-center items-center">
+    //     <h2 className="text-left">Add Task</h2>
+    //     <form action="" onSubmit={handleSubmit}>
+    //       <input
+    //         type="text"
+    //         name="task-name"
+    //         id="task-id"
+    //         required
+    //         value={taskName}
+    //         onChange={(e) => setTaskName(e.target.value)} />
+    //       <input
+    //         type="text"
+    //         name="task-description"
+    //         id="task-description"
+    //         max-lenght="150"
+    //         required
+    //         value={taskDescription}
+    //         onChange={(e) => setTaskDescription(e.target.value)} />
+
+    //       <button className="btn-blue" type="submit">Add Task</button>
+    //     </form>
+    // </div>
+    <div className="bg-gray-100 min-h-screen flex justify-center items-center">
+      <div className="bg-white p-6 rounded-md shadow-md w-full sm:w-96 lg:w-2/3 xl:w-1/2">
+        <h2 className="text-2xl font-semibold mb-4">Create Task</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            id="taskName"
+            name="taskName"
+            className="task-name"
+            placeholder="Task Name"
+            maxLength={80}
+            required
+            value={taskName}
+            onChange={(e) => setTaskName(e.target.value)}
+          />
+          <input
+            id="taskDescription"
+            name="taskDescription"
+            className="task-description"
+            placeholder="Task Description"
+            maxLength={80}
+            required
+            value={taskDescription}
+            onChange={(e) => setTaskDescription(e.target.value)}
+          />
+          <button
             type="submit"
-            sx={{ margin: 1 }}
+            className="btn-blue mx-auto"
           >
-            Add Task
-          </Button>
-        </Box>
-      </Box>
-    </Container>
+            <FaPlus className="text-xs md:text-sm mr-1" />
+            <span className="hidden md:inline">Add Task</span>
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 

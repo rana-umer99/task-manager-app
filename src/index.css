@@ -6,6 +6,12 @@
   .nav-header {
     @apply sticky z-[110] top-0 left-auto right-0 text-white bg-blue-500;
   }
+  .task-name{
+    @apply w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500 mb-4;
+  }
+  .task-description{
+    @apply w-full px-3 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-500 mb-4;
+  }
   .btn-green {
     @apply bg-green-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 mr-2 hover:bg-green-600;
   }
