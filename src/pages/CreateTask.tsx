@@ -25,28 +25,6 @@ const CreateTask: React.FC = () => {
   };
 
   return (
-    // <div className="container flex flex-col justify-center items-center">
-    //     <h2 className="text-left">Add Task</h2>
-    //     <form action="" onSubmit={handleSubmit}>
-    //       <input
-    //         type="text"
-    //         name="task-name"
-    //         id="task-id"
-    //         required
-    //         value={taskName}
-    //         onChange={(e) => setTaskName(e.target.value)} />
-    //       <input
-    //         type="text"
-    //         name="task-description"
-    //         id="task-description"
-    //         max-lenght="150"
-    //         required
-    //         value={taskDescription}
-    //         onChange={(e) => setTaskDescription(e.target.value)} />
-
-    //       <button className="btn-blue" type="submit">Add Task</button>
-    //     </form>
-    // </div>
     <div className="bg-gray-100 min-h-screen flex justify-center items-center">
       <div className="bg-white p-6 rounded-md shadow-md w-full sm:w-96 lg:w-2/3 xl:w-1/2">
         <h2 className="text-2xl font-semibold mb-4">Create Task</h2>
