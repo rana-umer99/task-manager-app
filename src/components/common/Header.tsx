@@ -1,16 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Pages} from './Pages';
 
 import { AppBar } from "@mui/material";
 
 import { FaTrash, FaPen, FaList } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
-
-const pages = [
-  { label: "Task List", href: "/list-tasks" },
-  { label: "Create Task", href: "/create-task" },
-  { label: "Bulk Delete", href: "/bulk-delete" },
-];
 
 const Header = () => {
   const navigate = useNavigate();
@@ -41,25 +36,25 @@ const Header = () => {
           </Link>
           <div className="flex items-center justify-center">
             <button
-              className="bg-green-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 mr-2 hover:bg-green-600"
-              onClick={() => handleCloseNavMenu(pages[0].href)}
+              className="btn-green"
+              onClick={() => handleCloseNavMenu(Pages[0].href)}
             >
               <FaList className="text-xs md:text-sm mr-1" />
-              <span className="hidden md:inline">{pages[0].label}</span>
+              <span className="hidden md:inline">{Pages[0].label}</span>
             </button>
             <button
-              className="bg-cyan-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 mr-2 hover:bg-cyan-600"
-              onClick={() => handleCloseNavMenu(pages[1].href)}
+              className="btn-blue"
+              onClick={() => handleCloseNavMenu(Pages[1].href)}
             >
               <FaPen className="text-xs md:text-sm mr-1" />
-              <span className="hidden md:inline">{pages[1].label}</span>
+              <span className="hidden md:inline">{Pages[1].label}</span>
             </button>
             <button
-              className="bg-red-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 hover:bg-red-600"
-              onClick={() => handleCloseNavMenu(pages[2].href)}
+              className="btn-red"
+              onClick={() => handleCloseNavMenu(Pages[2].href)}
             >
               <FaTrash className="text-xs md:text-sm mr-1" />
-              <span className="hidden md:inline">{pages[2].label}</span>
+              <span className="hidden md:inline">{Pages[2].label}</span>
             </button>
           </div>
         </div>

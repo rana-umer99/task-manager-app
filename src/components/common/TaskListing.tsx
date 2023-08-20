@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Button } from "@mui/material";
 import { FaTrash } from "react-icons/fa";
+import { Images } from "../../assets/img/image";
 import AppContext from "../../context";
 import TaskCard from "./TaskCard";
 
@@ -27,14 +28,6 @@ const TaskListing: React.FC<Props> = ({ isDeleting = false }) => {
     setCheckedIds([]);
   };
 
-  const imageSources = [
-    require("../../assets/img/1.jpg"),
-    require("../../assets/img/2.jpg"),
-    require("../../assets/img/3.jpg"),
-    require("../../assets/img/4.jpg"),
-    require("../../assets/img/5.jpg"),
-  ];
-
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -43,7 +36,7 @@ const TaskListing: React.FC<Props> = ({ isDeleting = false }) => {
             <TaskCard
               {...rest}
               taskId={id}
-              imageSrc={imageSources[id % imageSources.length]}
+              imageSrc={Images[id % Images.length]}
               isDeleting={isDeleting}
               isChecked={checkedIds.includes(id)}
               onToggleChecked={() => handleToggleChecked(id)}

@@ -24,7 +24,7 @@ const TaskCard: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className="bg-white shadow-md p-4 rounded-lg border border-gray-300 hover:border-blue-500 transition duration-300 ease-in-out transform hover:scale-105 flex items-center relative min-h-full overflow-hidden"
+      className="card-container"
       onClick={onToggleChecked}
     >
       <div className="flex-shrink-0">
@@ -32,13 +32,13 @@ const TaskCard: React.FC<Props> = ({
       </div>
       <div className="ml-4 flex-grow">
         <h3
-          className="text-gray-800 text-lg font-semibold leading-5 overflow-hidden line-clamp-2 max-h-16 mb-1"
+          className="c-title"
           title={label}
         >
           {label}
         </h3>
         <p
-          className="text-gray-600 leading-5 overflow-hidden line-clamp-2 max-h-20"
+          className="c-description"
           title={description}
         >
           {description}
