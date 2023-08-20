@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { Button } from "@mui/material";
 import { FaTrash } from "react-icons/fa";
 import { Images } from "../../assets/img/image";
 import AppContext from "../../context";
@@ -30,7 +29,7 @@ const TaskListing: React.FC<Props> = ({ isDeleting = false }) => {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pb-2">
         {allTasks.map(({ id, ...rest }) => (
           <div className="min-h-[100px]" key={id}>
             <TaskCard
@@ -44,20 +43,17 @@ const TaskListing: React.FC<Props> = ({ isDeleting = false }) => {
           </div>
         ))}
       </div>
-      <div className="flex justify-center w-full pb-7">
+      <div className="flex justify-center w-full">
         {isDeleting && (
-          <Button
-            variant="contained"
-            color="warning"
+          <button
             type="submit"
-            sx={{ mt: "2rem" }}
             disabled={!checkedIds.length}
             onClick={handleDelete}
-            className="flex items-center justify-center space-x-1 w-40"
+            className="btn-bulk-delete"
           >
             <FaTrash className="text-xs md:text-sm mr-1" />
             <span className="hidden md:inline">Delete</span>
-          </Button>
+          </button>
         )}
       </div>
     </>

@@ -2,34 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
+  .nav-header {
+    @apply sticky z-[110] top-0 left-auto right-0 text-white bg-blue-500;
+  }
   .btn-green {
     @apply bg-green-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 mr-2 hover:bg-green-600;
   }
-  .btn-blue{
+  .btn-blue {
     @apply bg-cyan-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 mr-2 hover:bg-cyan-600;
   }
-  .btn-red{
+  .btn-red {
     @apply bg-red-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 hover:bg-red-600;
   }
-  .card-container{
+  .btn-bulk-delete {
+    @apply bg-red-500 text-white px-4 py-2 rounded-md flex items-center justify-center space-x-1 hover:bg-red-600 mt-4 w-40 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .card-container {
     @apply bg-white shadow-md p-4 rounded-lg border border-gray-300 hover:border-blue-500 transition duration-300 ease-in-out transform hover:scale-105 flex items-center relative min-h-full overflow-hidden;
   }
-  .c-title{
+  .c-title {
     @apply text-gray-800 text-lg font-semibold leading-5 overflow-hidden line-clamp-2 max-h-16 mb-1;
   }
-  .c-description{
-    @apply text-gray-600 leading-5 overflow-hidden line-clamp-2 max-h-20
+  .c-description {
+    @apply text-gray-600 leading-5 overflow-hidden line-clamp-2 max-h-20;
   }
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
